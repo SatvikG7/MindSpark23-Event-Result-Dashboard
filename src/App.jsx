@@ -48,7 +48,7 @@ function EditableForm({ data, updateData }) {
                                 <input
                                     type="text"
                                     id={`winners-${index}`}
-                                    defaultValue={item.result[0].winners.join(
+                                    defaultValue={event.result[index].winners.join(
                                         ", "
                                     )}
                                     className="form-control"
