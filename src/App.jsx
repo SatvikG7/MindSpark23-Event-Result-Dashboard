@@ -167,7 +167,6 @@ function App() {
             <div>
                 <h1 className="text-center">MindSpark'23 Results</h1>
                 <h2 className="text-center">Dashboard</h2>
-                {user ? <h3 className="text-center">{user.email}</h3> : <></>}
             </div>
             {loading ? (
                 <h1>Loading...</h1>
