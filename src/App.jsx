@@ -8,6 +8,8 @@ import {
     onAuthStateChanged,
     signInWithEmailAndPassword,
 } from "firebase/auth";
+import Masonry from "react-layout-masonry";
+
 // Replace with your Firebase config
 const firebaseConfig = {
     apiKey: "AIzaSyB9g4lTKg_M0PrEwJCY7PRNrCs8w1S_mDY",
@@ -32,38 +34,38 @@ analytics.app.automaticDataCollectionEnabled = true;
 
 function EditableForm({ data, updateData }) {
     return (
-        <div className="wrapper d-flex flex-row flex-wrap">
-            {data.map((item, index) => (
-                <div key={index} className="module m-1">
-                    <h3>{item.mname}</h3>
-                    {item.result.map((event, index) => (
-                        <div key={index} className="event mb-3">
-                            <label
-                                className="form-label"
-                                htmlFor={`winners-${index}`}
-                            >
-                                {event.ename}:{" "}
-                            </label>
-                            <div className="d-flex flex-row">
-                                <input
-                                    type="text"
-                                    id={`winners-${index}`}
-                                    defaultValue={event.result[index].winners.join(
-                                        ", "
-                                    )}
-                                    className="form-control"
-                                />
-                                <button
-                                    className="btn btn-primary"
-                                    onClick={() => updateData(index)}
+        <div className="wrapper">
+            <Masonry columns={{ 640: 1, 768: 2, 1024: 3 }} gap={16}>
+                {data.map((item, index) => (
+                    <div key={index} className="module m-1">
+                        <h3>{item.mname}</h3>
+                        {item.result.map((event, index) => (
+                            <div key={index} className="event mb-3">
+                                <label
+                                    className="form-label"
+                                    htmlFor={`winners-${index}`}
                                 >
-                                    Submit
-                                </button>
+                                    {event.ename}:{" "}
+                                </label>
+                                <div className="d-flex flex-row">
+                                    <input
+                                        type="text"
+                                        id={`winners-${index}`}
+                                        defaultValue={event.winners.join(", ")}
+                                        className="form-control"
+                                    />
+                                    <button
+                                        className="btn btn-primary"
+                                        onClick={() => updateData(index)}
+                                    >
+                                        Submit
+                                    </button>
+                                </div>
                             </div>
-                        </div>
-                    ))}
-                </div>
-            ))}
+                        ))}
+                    </div>
+                ))}
+            </Masonry>
         </div>
     );
 }
@@ -110,7 +112,7 @@ function Login() {
             <button className="btn btn-primary" onClick={login}>
                 Login
             </button>
-            {error && <p>{error}</p>}
+            {error && <p className="text-danger">{error}</p>}
         </div>
     );
 }
@@ -155,18 +157,39 @@ function App() {
             .map((winner) => winner.trim());
         const updatedData = [...data];
         updatedData[index].result[0].winners = winners;
-
+        // console.log(updatedData);
         // Update the data in Firebase
-        set(dataRef, updatedData).then(() =>
-            alert("Data updated successfully")
-        );
+        setTimeout(() => {
+            set(dataRef, updatedData).then(() => {
+                alert("Data updated successfully!");
+            });
+        }, 100);
     }
 
+    const handleSignOut = () => {
+        auth.signOut();
+    };
+
     return (
-        <div className="container">
+        <div className="container m-3">
             <div>
-                <h1 className="text-center">MindSpark'23 Results</h1>
+                <h1 className="text-center">MindSpark'23 Event Results</h1>
                 <h2 className="text-center">Dashboard</h2>
+                {user ? (
+                    <div className="d-flex align-items-center justify-content-center flex-row flex-wrap gap-2 m-4">
+                        <h3 className="text-center bg-success rounded p-2 m-0 text-white">
+                            User: {user.email}
+                        </h3>
+                        <button
+                            className="btn btn-danger p-2"
+                            onClick={handleSignOut}
+                        >
+                            Sign Out
+                        </button>
+                    </div>
+                ) : (
+                    <></>
+                )}
             </div>
             {loading ? (
                 <h1>Loading...</h1>
@@ -182,4 +205,3 @@ function App() {
 }
 
 export default App;
-

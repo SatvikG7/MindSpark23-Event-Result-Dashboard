@@ -1,0 +1,195 @@
+{
+    "result": [
+        {
+            "mname": "AMUZIA",
+            "result": [
+                {
+                    "ename": "FANDOM",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "Flash",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        },
+        {
+            "mname": "AVIONICA",
+            "result": [
+                {
+                    "ename": "TAKE OFF",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "CONTRAPTION",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        },
+        {
+            "mname": "CODIFICA",
+            "result": [
+                {
+                    "ename": "FLIP IT",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "WEBSCAPE",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "RETRACER",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "CODE JUNKIE",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "NEUROHACK",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        },
+        {
+            "mname": "ILLUMINATI",
+            "result": [
+                {
+                    "ename": "INDIKYA",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "TECH DE BAIT",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "TORQUEST",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        },
+        {
+            "mname": "LOGICA",
+            "result": [
+                {
+                    "ename": "DELTA SIGMA PI",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "INTEGRATON BEE",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        },
+        {
+            "mname": "POTENTIA",
+            "result": [
+                {
+                    "ename": "ASSEMBLIX",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "FUSION ID",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        },
+        {
+            "mname": "PRODIGIUM",
+            "result": [
+                {
+                    "ename": "SHERLOCKED",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "GOOGLER",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        },
+        {
+            "mname": "ROBOTICA",
+            "result": [
+                {
+                    "ename": "BOT WRESTLING",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "VIRTUAL ROBOTICS",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "ROBO RACES",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "ROBO FALCONARY",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "SEARCH N' DESTROY",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "ROBO WARS",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "ROBO ROYALE",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        },
+        {
+            "mname": "STRUKTURA",
+            "result": [
+                {
+                    "ename": "UTOPIA",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "ID CIVIL",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "CONQUEST",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "EDIFEX",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        },
+        {
+            "mname": "SUBSTANTIA",
+            "result": [
+                {
+                    "ename": "ON THE ETCH",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        },
+        {
+            "mname": "VOLTUS",
+            "result": [
+                {
+                    "ename": "CIRCUIT FIXER",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "ELECTRADE",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "MICROAPPS",
+                    "winners": ["A", "B", "C"]
+                },
+                {
+                    "ename": "FOX HUNT",
+                    "winners": ["A", "B", "C"]
+                }
+            ]
+        }
+    ]
+}
