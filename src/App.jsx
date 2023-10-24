@@ -171,7 +171,7 @@ function App() {
     };
 
     return (
-        <div className="container m-3">
+        <div className="container">
             <div>
                 <h1 className="text-center">MindSpark'23 Event Results</h1>
                 <h2 className="text-center">Dashboard</h2>
