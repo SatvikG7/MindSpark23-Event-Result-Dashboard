@@ -35,7 +35,7 @@ analytics.app.automaticDataCollectionEnabled = true;
 function EditableForm({ data, updateData }) {
     return (
         <div className="wrapper">
-            <Masonry columns={{ 640: 1, 768: 2, 1024: 3 }} gap={16}>
+            <Masonry columns={{ 640: 1, 1024: 2 }} gap={16}>
                 {data.map((item, index) => (
                     <div key={index} className="module m-1">
                         <h3>{item.mname}</h3>
@@ -48,12 +48,19 @@ function EditableForm({ data, updateData }) {
                                     {event.ename}:{" "}
                                 </label>
                                 <div className="d-flex flex-row">
-                                    <input
+                                    <textarea
+                                        name="text"
+                                        id={`winners-${index}`}
+                                        defaultValue={event.winners.join(", ")}
+                                        className="form-control"
+                                        rows="4"
+                                    ></textarea>
+                                    {/* <input
                                         type="text"
                                         id={`winners-${index}`}
                                         defaultValue={event.winners.join(", ")}
                                         className="form-control"
-                                    />
+                                    /> */}
                                     <button
                                         className="btn btn-primary"
                                         onClick={() => updateData(index)}
@@ -171,7 +178,7 @@ function App() {
     };
 
     return (
-        <div className="container">
+        <div className="myContainer">
             <div>
                 <h1 className="text-center">MindSpark'23 Event Results</h1>
                 <h2 className="text-center">Dashboard</h2>
